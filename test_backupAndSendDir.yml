@@ -16,4 +16,6 @@
     command: "mv ./ansible_test/testDir ./ansible_test/testDir_{{cur_date}}"
 
   - name: "Send new dir"
-    copy: "src=/root/ansible_test/testDir dest=./ansible_test"
+    copy: 
+      src: "/root/ansible_test/testDir"
+      dest: "./ansible_test"
