@@ -1,6 +1,6 @@
 ---
 - hosts: test_group
-  become: false
+  become: true
 
   tasks:
 
