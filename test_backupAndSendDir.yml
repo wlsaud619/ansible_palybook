@@ -20,4 +20,4 @@
     copy: 
       src: /root/ansible_test/testDir
       dest: ~/ansible_test
-      remot_src=no
+      remot_src: no
