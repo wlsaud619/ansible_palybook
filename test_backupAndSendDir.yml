@@ -17,5 +17,5 @@
 
   - name: "Send new dir"
     copy:
-      src: "/data/mgmt/ansible_test/testDir/new.txt"
+      src: "~/ansible_test/testDir/new.txt"
       dest: "~/ansible_test"
