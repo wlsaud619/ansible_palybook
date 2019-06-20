@@ -24,4 +24,7 @@
     copy:
       src: "{{server_dir}}"
       dest: "{{remoteClient_dir}}"
+      ownner: mgmt
+      group: mgmt
+      mod: 0744      
 
