@@ -1,0 +1,22 @@
+---
+- hosts: test_group
+  become: false
+
+  tasks:
+  - name: "current date(format: 2019-01-01_12:34:56)"
+    shell: "date +%Y-%m-%d_%H:%M:%S"
+    register: dateValue
+
+  - name: "current date(format: 190101)"
+    shell: "date +%y%m%d"
+    register: dateValue_2
+
+  - name: "Set variables"
+    set_fact:
+      cur_date: "{{dateValue.stdout[0:10]}}"
+      cur_time: "{{dateValue.stdout[11:]}}"
+      cur_date2: "{{dateValue_2.stdout}}"
+
+  - name: "date"
+    debug:
+      msg: "date: {{cur_date}}, time: {{cur_time}}, date2: {{cur_date2}}"

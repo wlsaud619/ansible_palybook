@@ -1,0 +1,19 @@
+---
+- hosts: test_group
+  become: false
+
+  tasks:
+
+  - name: "Current date(format: 190101)"
+    shell: "date +%y%m%d"
+    register: dateValue
+
+  - name: "Set variables"
+    set_fact:
+      cur_date: "{{dateValue.stdout}}"
+
+  - name: "Backup old dir"
+    command: "mv ./ansible_test/testDir ./ansible_test/testDir_{{cur_date}}"
+
+  - name: "Send new dir"
+    copy: "src=/root/ansible_test/testDir dest=./ansible_test"
