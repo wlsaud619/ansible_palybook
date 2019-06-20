@@ -13,7 +13,7 @@
       cur_date: "{{dateValue.stdout}}"
 
   - name: "Backup old dir"
-    command: "mv ./ansible_test/testDir ./ansible_test/testDir_{{cur_date}}"
+    command: "mv ~/ansible_test/testDir ~/ansible_test/testDir_{{cur_date}}"
 
   - name: "Send new dir"
     copy: 
