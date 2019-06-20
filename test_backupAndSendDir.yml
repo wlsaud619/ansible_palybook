@@ -24,5 +24,3 @@
     copy:
       src: "{{server_dir}}"
       dest: "{{remoteClient_dir}}"
-      mod: 0744    
-
