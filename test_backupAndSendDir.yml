@@ -22,6 +22,6 @@
 
   - name: "Send new dir"
     copy:
-      src: {{server_dir}}
-      dest: {{remoteClient_dir}}
+      src: "{{server_dir}}"
+      dest: "{{remoteClient_dir}}"
 
