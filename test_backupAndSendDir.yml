@@ -17,7 +17,6 @@
 
   - name: "Send new dir"
     copy: 
-      src: ~/ansible_test/testDir
+      src: /data/mgmt/ansible_test/testDir/new.txt
       dest: ~/ansible_test
       remot_src: no
-      mode: preserve
