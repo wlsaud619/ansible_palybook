@@ -1,6 +1,0 @@
----
-- hosts: all
-  become: false
-  tasks:
-  - name: ping test
-    ping:
