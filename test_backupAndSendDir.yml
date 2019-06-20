@@ -25,7 +25,4 @@
       src: "{{server_dir}}"
       dest: "{{remoteClient_dir}}"
       become: yes
-      become_user: mgmt
-      owner: mgmt
-      group: mgmt
-      mode: 0744
+      become_user: root
