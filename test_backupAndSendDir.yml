@@ -24,4 +24,4 @@
     copy:
       src: "{{server_dir}}"
       dest: "{{remoteClient_dir}}"
-      remote_src: false
+      remote_src: no
