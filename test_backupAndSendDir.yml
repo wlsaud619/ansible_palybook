@@ -1,6 +1,7 @@
 ---
 - hosts: test_group
   become: true
+  become_user: root
 
   tasks:
 
@@ -19,3 +20,4 @@
     copy: 
       src: /root/ansible_test/testDir
       dest: ~/ansible_test
+      remot_src=no
