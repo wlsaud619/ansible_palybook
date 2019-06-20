@@ -24,4 +24,5 @@
     copy:
       src: "{{server_dir}}"
       dest: "{{remoteClient_dir}}"
-      remote_src: no
+      become: yes
+      become_user: root
