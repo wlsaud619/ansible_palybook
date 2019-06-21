@@ -16,10 +16,10 @@
     debug:
       msg: "extra variables: {{server_dir}}, {{remoteClient_dir}}, cur_date: {{cur_date}}"
   
+  - name: "Backup old dir"
+    command: "mv ~/ansible_test/testDir ~/ansible_test/testDir_{{cur_date}}"
 
-      #  - name: "Backup old dir"
-      #    command: "mv ~/ansible_test/testDir ~/ansible_test/testDir_{{cur_date}}"
-
+# Setting Extra variables in "AWX templates"
   - name: "Send new dir"
     copy:
       src: "{{server_dir}}"
