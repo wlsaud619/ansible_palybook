@@ -1,9 +1,9 @@
 ---
 - hosts: test_group
+  gather_facts: no
   become: false
 
   tasks:
-
   - name: "Current date(format: 190101)"
     shell: "date +%y%m%d"
     register: dateValue
